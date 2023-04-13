@@ -49,7 +49,7 @@ const Header = () => {
                 {/* Icon end */}
 
                 {/* Mobile Icon Start*/}
-                <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex justify-center items-center hover:bg-black/[0.05] cursor-pointer relative -mr-2">
+                <div className="md:hidden w-8 md:w-12 h-8 md:h-12 rounded-full flex justify-center items-center hover:bg-black/[0.05] cursor-pointer relative -mr-2">
                     {mobileMenu ? (
                         <VscChromeClose
                             className="text-[16px]"
