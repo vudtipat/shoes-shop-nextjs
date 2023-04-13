@@ -2,6 +2,7 @@ import React,{useState,useEffect} from "react";
 import Wrapper from "./Wrapper";
 import Link from "next/link";
 import Menu from "./Menu";
+import MenuMobile from './MenuMobile';
 
 import { IoMdHeartEmpty } from "react-icons/io";
 import { BsCart } from "react-icons/bs";
@@ -26,6 +27,8 @@ const Header = () => {
 
             <Menu showCatMenu={showCatMenu} setShowCatMenu={setShowCatMenu}/>
         
+            {mobileMenu && <MenuMobile showCatMenu={showCatMenu} setShowCatMenu={setShowCatMenu} setMobileMenu={setMobileMenu}/>}
+
             <div className="flex items-center gap-2 text-black">
                 {/* Icon Start */}
                 <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex justify-center items-center hover:bg-black/[0.05] cursor-pointer relative">
