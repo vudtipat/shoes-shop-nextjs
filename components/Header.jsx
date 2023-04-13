@@ -17,7 +17,7 @@ const Header = () => {
     const [categories, setCategories] = useState(null);
 
     const controlNavbar = () => {
-        if(window.scrollY > 200){
+        if(window.scrollY > 200 ){
             setShow("-translate-y-[80px]");
         }
         else {
@@ -30,7 +30,7 @@ const Header = () => {
         return () => {
             window.removeEventListener("scroll",controlNavbar);
         }
-    },[lastScrollY]);
+    });
 
     return (
     <header className={`w-full h-[50px] md:h-[80px] bg-white flex items-center justify-between 
