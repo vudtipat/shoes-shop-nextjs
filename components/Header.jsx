@@ -16,7 +16,22 @@ const Header = () => {
     const [lastScrollY, setLastScrollY] = useState(0);
     const [categories, setCategories] = useState(null);
 
-    
+    const controlNavbar = () => {
+        if(window.scrollY > 200){
+            setShow("-translate-y-[80px]");
+        }
+        else {
+            setShow("translate-y-0");
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener("scroll",controlNavbar);
+        return () => {
+            window.removeEventListener("scroll",controlNavbar);
+        }
+    },[lastScrollY]);
+
     return (
     <header className={`w-full h-[50px] md:h-[80px] bg-white flex items-center justify-between 
         z-20 sticky top-0 transition-transform duration-300 ${show}`}>
