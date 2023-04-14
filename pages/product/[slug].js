@@ -3,6 +3,7 @@ import Router, { useRouter } from 'next/router';
 import { IoMdHeartEmpty } from 'react-icons/io';
 import Wrapper from '@/components/Wrapper';
 import ProductDetailCarousel from '@/components/ProductDetailCarousel';
+import RelateProduct from '@/components/RelateProduct';
 
 const ProductDetail = () => {
 
@@ -121,6 +122,8 @@ const ProductDetail = () => {
                     </div>
                 </div>  
             </div>
+
+            <RelateProduct/>
         </Wrapper>
     </div>
   )
